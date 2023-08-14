@@ -1,17 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.0"
-    }
-  }
-  backend "s3" {
-    bucket = "dcube-terraform-state"
-    # key    = "dev/vpc.tfstate"
-    region         = "us-west-1"
-    dynamodb_table = aws_dynamodb_table.state_lock.name
-  }
-}
 resource "aws_alb" "application_load_balancer" {
   name               = "${var.environment}-${var.application}-alb"
   internal           = var.internal
