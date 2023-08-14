@@ -60,11 +60,8 @@ resource "aws_alb_listener" "application_listener" {
     type             = var.listener_type
   }
 }
-# Data source to fetch an existing VPC
 data "aws_vpc" "existing_vpc" {
-  tags = {
-    Name = "vpc-8d02f6e6"  # Replace with the actual name of your VPC's "Name" tag
-  }
+  id = "vpc-8d02f6e6"  # Replace with the actual VPC ID
 }
 
 
