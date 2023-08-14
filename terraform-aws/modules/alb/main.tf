@@ -17,6 +17,9 @@ resource "aws_alb" "application_load_balancer" {
     var.tags
   )
 }
+module "alb_module" {
+  source = "../../../modules/alb"  # Adjust the path accordingly
+}
 
 resource "aws_alb_target_group" "alb_tg" {
   name_prefix = "alb-tg"
