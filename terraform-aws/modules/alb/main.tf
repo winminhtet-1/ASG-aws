@@ -16,6 +16,7 @@ resource "aws_alb" "application_load_balancer" {
     },
     var.tags
   )
+}
 
 resource "aws_alb_target_group" "alb_tg" {
   name_prefix = "alb-tg"
