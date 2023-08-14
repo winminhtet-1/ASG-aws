@@ -5,7 +5,7 @@ variable "region" {
 
 variable "vpc_id" {
   type        = string
-  default = "vpc-8d02f6e6"
+  description = "it is your vpc"
 }
 
 variable "tags" {
