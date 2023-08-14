@@ -5,7 +5,7 @@ variable "region" {
 
 variable "vpc_id" {
   type        = string
-  description = "ID of the VPC associated with the security group."
+  defadefault = "vpc-8d02f6e6" 
 }
 
 variable "tags" {

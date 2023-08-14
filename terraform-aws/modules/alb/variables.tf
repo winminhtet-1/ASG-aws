@@ -26,7 +26,7 @@ variable "security_group_ids" {
 
 variable "vpc_id" {
   type        = string
-  description = "The ID of the VPC to use for the resources."
+  dedefault = "vpc-8d02f6e6" 
 }
 
 variable "alb_subnets" {

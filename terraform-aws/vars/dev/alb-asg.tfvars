@@ -93,9 +93,5 @@ propagate_at_launch              = true
 instance_warmup_time             = 30
 target_value                     = 50
 
-#tags
-owner                            = "techiescamp"
-environment                      = "dev"
-cost_center                      = "techiescamp-commerce"
-application                      = "java-app"
+
 
