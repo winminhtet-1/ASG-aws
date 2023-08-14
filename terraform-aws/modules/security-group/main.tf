@@ -1,7 +1,7 @@
 resource "aws_security_group" "instance_sg" {
   name        = "${var.environment}-${var.application}"
   description = "Security Group for Instance"
-  vpc_id      = var.vpc_id
+  vpc_id      = "vpc-8d02f6e6"
 
   # Ingress rules for CIDR blocks
   dynamic "ingress" {
