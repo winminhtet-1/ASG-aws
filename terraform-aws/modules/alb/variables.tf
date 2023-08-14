@@ -26,7 +26,7 @@ variable "security_group_ids" {
 
 variable "vpc_id" {
   type        = string
-  dedefault = "vpc-8d02f6e6" 
+  default = "vpc-8d02f6e6" 
 }
 
 variable "alb_subnets" {

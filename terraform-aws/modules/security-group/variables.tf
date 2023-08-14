@@ -5,7 +5,7 @@ variable "region" {
 
 variable "vpc_id" {
   type        = string
-  defadefault = "vpc-8d02f6e6" 
+  default = "vpc-8d02f6e6"
 }
 
 variable "tags" {
