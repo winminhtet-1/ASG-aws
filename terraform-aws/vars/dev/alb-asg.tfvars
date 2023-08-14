@@ -1,10 +1,9 @@
-region                           = "us-west-2"
+region                           = "us-west-1"
 
 # alb
 internal                       = false
 loadbalancer_type              = "application"
-alb_subnets                    = ["subnet-10829e78", "subnet-320f5a48", "subnet-43902d0f"]
-
+alb_subnets                    = ["subnet-ada08aca", "subnet-df3b0bf1", "subnet-aa5a2394"]
 #alb-sg
 alb_ingress_cidr_from_port     = [80]
 alb_ingress_cidr_to_port       = [80]
@@ -75,8 +74,8 @@ listener_type                   = "forward"
 ami_id                           = "ami-020f3ca563c92097b"
 instance_type                    = "t2.medium"
 key_name                         = "test"
-vpc_id                           = "vpc-8d02f6e6"
-asg_subnets                      = ["subnet-10829e78", "subnet-320f5a48", "subnet-43902d0f"]
+vpc_id                           = "vpc-60c2841a"
+asg_subnets                      = ["subnet-ada08aca", "subnet-df3b0bf1", "subnet-aa5a2394"]
 public_access                    = true
 
 #user_data
