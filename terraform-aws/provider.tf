@@ -8,7 +8,7 @@ terraform {
   backend "s3" {
     bucket = "dcube-terraform-state"
     # key    = "dev/vpc.tfstate"
-    region         = "us-west-2"
+    region         = "us-west-1"
     dynamodb_table = aws_dynamodb_table.state_lock.name
   }
 }
