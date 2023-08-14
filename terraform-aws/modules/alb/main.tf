@@ -17,15 +17,12 @@ resource "aws_alb" "application_load_balancer" {
     var.tags
   )
 }
-module "alb_module" {
-  source = "../../../modules/alb"  # Adjust the path accordingly
-}
 
 resource "aws_alb_target_group" "alb_tg" {
   name_prefix = "alb-tg"
   port        = var.target_group_port
   protocol    = var.target_group_protocol
-  vpc_id      = var.vpc_id
+  vpc_id      = var.v
   target_type = var.target_type
 
   health_check {
