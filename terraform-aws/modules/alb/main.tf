@@ -22,7 +22,7 @@ resource "aws_alb_target_group" "alb_tg" {
   name_prefix = "alb-tg"
   port        = var.target_group_port
   protocol    = var.target_group_protocol
-  vpc_id      = var.v
+  vpc_id      = var.vpc_id
   target_type = var.target_type
 
   health_check {
