@@ -16,16 +16,12 @@ resource "aws_alb" "application_load_balancer" {
     },
     var.tags
   )
-}
-data "aws_vpc" "existing_vpc" {
-  id = "vpc-8d02f6e6"  # Replace with the actual VPC ID
-}
 
 resource "aws_alb_target_group" "alb_tg" {
   name_prefix = "alb-tg"
   port        = var.target_group_port
   protocol    = var.target_group_protocol
-  vpc_id      = data.aws_vpc.existing_vpc.id
+  vpc_id      = "${var.vpc_id}"
   target_type = var.target_type
 
   health_check {
