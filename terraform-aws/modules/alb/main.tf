@@ -18,11 +18,12 @@ resource "aws_alb" "application_load_balancer" {
   )
 }
 
+
 resource "aws_alb_target_group" "alb_tg" {
   name_prefix = "alb-tg"
   port        = var.target_group_port
   protocol    = var.target_group_protocol
-  vpc_id      = var.vpc_id
+  vpc_id      = data.aws_vpc.existing_vpc
   target_type = var.target_type
 
   health_check {
@@ -59,3 +60,15 @@ resource "aws_alb_listener" "application_listener" {
     type             = var.listener_type
   }
 }
+# Data source to fetch an existing VPC
+data "aws_vpc" "existing_vpc" {
+  tags = {
+    Name = "vpc-8d02f6e6"  # Replace with the actual name of your VPC's "Name" tag
+  }
+}
+
+
+
+
+
+
